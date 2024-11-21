@@ -2,29 +2,33 @@ value:
   value:
     context:
       domain: ONDC:ONEST10
-      action: on_confirm
+      action: on_status
       version: 2.0.0
       bap_id: worker-hub.bap.io
       bap_uri: https://worker-hub.bap.io
-      bpp_id: job-hub.bpp.io
-      bpp_uri: https://job-hub.bpp.io
       transaction_id: a9aaecca-10b7-4d19-b640-b047a7c62195
-      message_id: 8cbb5e99-5d06-4855-81e9-a4fc8013dbff
+      message_id: c8e3968c-cd78-4e46-aa34-0d541e46bd73
       location:
         city:
           code: city_code_value
         country:
           code: country_code_value
-      timestamp: '2023-02-23T08:20:06Z'
-      ttl: P1M
+      timestamp: '2023-02-22T11:50:46.742Z'
+      ttl: PT10M
     message:
       order:
-        id: '1677140405881'
-        status: Created
+        status: In-
         provider:
           id: '1'
           descriptor:
             name: Affinidi
+          fulfillments:
+            - id: '1'
+              type: REMOTE
+            - id: '2'
+              type: HYBRID
+            - id: '3'
+              type: ONSITE
           locations:
             - id: L1
               city:
@@ -34,7 +38,7 @@ value:
                 name: Maharastra
                 code: MH
         items:
-          - id: a23f2fdfbbb8ac402bf259d75402eb0792f50c095f7d08a55475e7af1c2dadca
+          - id: 0253719F295521CED39EC9C2F3C8DCDE
             descriptor:
               name: Fullstack Engineer
               long_desc: >-
@@ -53,22 +57,30 @@ value:
                 identify and solve complex problems in a methodological manner 
             fulfillment_ids:
               - '1'
+              - '2'
+              - '3'
             location_ids:
               - L1
+            time:
+              range:
+                start: '2023-01-03T13:23:01+00:00'
+                end: '2023-02-03T13:23:01+00:00'
             tags:
               - display: true
                 descriptor:
                   code: ACADEMIC-ELIGIBILITY
-                  name: Academic Eligibility
+                  name: Academic eligibility
                 list:
                   - descriptor:
                       code: COURSE-NAME
-                      name: Name of the Course
+                      name: Name of the course
                     value: Class-X
                     display: true
                   - descriptor:
                       code: MIN-PERCENTAGE
-                      name: Minimum Percentage of Marks for Eligibility
+                      name: >-
+                        Minimum percentage of marks to be obtained in the course
+                        for eligibility
                     value: '60'
                     display: true
                   - descriptor:
@@ -79,16 +91,18 @@ value:
               - display: true
                 descriptor:
                   code: ACADEMIC-ELIGIBILITY
-                  name: Academic Eligibility
+                  name: Academic eligibility
                 list:
                   - descriptor:
                       code: COURSE-NAME
-                      name: Name of the Course
+                      name: Name of the course
                     value: Class-XII
                     display: true
                   - descriptor:
                       code: MIN-PERCENTAGE
-                      name: Minimum Percentage of Marks for Eligibility
+                      name: >-
+                        Minimum percentage of marks to be obtained in the course
+                        for eligibility
                     value: '60'
                     display: true
                   - descriptor:
@@ -99,16 +113,18 @@ value:
               - display: true
                 descriptor:
                   code: ACADEMIC-ELIGIBILITY
-                  name: Academic Eligibility
+                  name: Academic eligibility
                 list:
                   - descriptor:
                       code: COURSE-LEVEL
-                      name: Level of the Course
+                      name: Level of the course
                     value: Under Graduate
                     display: true
                   - descriptor:
                       code: MIN-PERCENTAGE
-                      name: Minimum Percentage of Marks for Eligibility
+                      name: >-
+                        Minimum percentage of marks to be obtained in the course
+                        for eligibility
                     value: '60'
                     display: true
                   - descriptor:
@@ -119,11 +135,11 @@ value:
               - display: true
                 descriptor:
                   code: ACADEMIC-ELIGIBILITY
-                  name: Academic Eligibility
+                  name: Academic eligibility
                 list:
                   - descriptor:
                       code: COURSE-LEVEL
-                      name: Level of the Course
+                      name: Level of the course
                     value: Graduate
                     display: true
                   - descriptor:
@@ -134,69 +150,74 @@ value:
               - display: true
                 descriptor:
                   code: JOB-REQUIREMENTS
-                  name: Job Requirements
+                  name: Job requirements
                 list:
                   - descriptor:
                       code: REQ-EXPERIENCE
-                      name: Required Work Experience in Years
+                      name: Required work experience in years
                     value: '2.5'
                     display: true
                   - descriptor:
                       code: REQ-PROF-SKILL
-                      name: Skills Required for the Role
+                      name: Skills required for the role
                     value: android-development
                     display: true
                   - descriptor:
                       code: REQ-PROF-SKILL
-                      name: Skills Required for the Role
+                      name: Skills required for the role
                     value: dev-ops
                     display: true
                   - descriptor:
-                      code: REQ-ADDL-SKILL
-                      name: Additional Skills Required for the Job
+                      code: REQ-PROF-SKILL
+                      name: Additional skills required for the job
                     value: >-
-                      8+ years of engineering experience in shipping user-facing
-                      production features
+                      You have 8+ years of engineering experience, predominantly
+                      in shipping user-facing production features
                     display: true
               - display: true
                 descriptor:
                   code: JOB-RESPONSIBILITIES
-                  name: Job Responsibilities
+                  name: Job responsibilities
                 list:
                   - descriptor:
                       code: RESPONSIBILITY
                       name: Responsibility
                     value: >-
-                      Build frontend experiences for tools (Web, PWA, React
-                      Native)
-                    display: true
-                  - descriptor:
-                      code: RESPONSIBILITY
-                      name: Responsibility
-                    value: Define long-term technical direction and vision
+                      Build frontend experiences for our tools (Web, PWA and
+                      React Native)
                     display: true
                   - descriptor:
                       code: RESPONSIBILITY
                       name: Responsibility
                     value: >-
-                      Create reliable interfaces using modern tools like React,
-                      React Native, Typescript, Node.js, Jest, and Webpack.
+                      Articulate a long term technical direction and vision for
+                      building, maintaining, and scaling our web and mobile
+                      platforms
                     display: true
                   - descriptor:
                       code: RESPONSIBILITY
                       name: Responsibility
                     value: >-
-                      Mentor team members on design techniques and coding
-                      standards.
+                      Create trustworthy user experiences by building interfaces
+                      that are simple, easy to comprehend, performant and
+                      reliable using modern tools like React, React Native,
+                      Typescript, Node.js, Jest and Webpack.
+                    display: true
+                  - descriptor:
+                      code: RESPONSIBILITY
+                      name: Responsibility
+                    value: >-
+                      Mentor and train other team members on design techniques
+                      and coding standards.
                     display: true
               - display: true
                 descriptor:
                   code: LISTING-DETAILS
-                  name: Listing Details
+                  name: Listing details
                 list:
                   - descriptor:
                       code: INDUSTRY-TYPE
-                      name: Industry Type
+                      name: Industry type
                     value: IT Services & Consulting
                     display: true
                   - descriptor:
@@ -205,36 +226,31 @@ value:
                     value: Engineering - Software & QA
                     display: true
                   - descriptor:
-                      code: EMPLOYMENT-TYPE
-                      name: Employment Type
+                      code: CTC
+                      name: Salary Offered
+                    value: 20,00,000
+                    display: true
+                  - descriptor:
+                      code: POST-START-LOCATION
+                      name: Post start location
+                    value: Pune
+                    display: true
+                  - descriptor:
+                      code: WORKING-LOCATION
+                      name: Working location
+                    value: Hybrid
+                    display: true
+                  - descriptor:
+                      code: WORKING-TIME
+                      name: Working hours
                     value: Full-Time
-                    display: true
-                  - descriptor:
-                      code: JOB-ROLE
-                      name: Job Role
-                    value: DevOps Engineer
-                    display: true
-              - display: true
-                descriptor:
-                  code: SALARY-INFO
-                  name: Salary Information
-                list:
-                  - descriptor:
-                      code: GROSS-MIN
-                      name: Minimum Gross Pay
-                    value: '900000'
-                    display: true
-                  - descriptor:
-                      code: GROSS-MAX
-                      name: Maximum Gross Pay
-                    value: '1200000'
                     display: true
             fulfillments:
               - id: '1'
                 type: REMOTE
                 state:
                   descriptor:
-                    code: APPLICATION-STARTED
+                    code: APPLICATION-IN-PROGRESS
                 customer:
                   person:
                     name: Sanjay
